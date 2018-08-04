@@ -8,10 +8,12 @@
     <meta name="author" content="Katani Limited">
     <!--change the content later on, also add more meta tags data like the open graph data-->
     <meta name="description" content="Company that specializes in all things sisal">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    
 
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -19,60 +21,71 @@
     <title>Document</title>
 </head>
 
-<body>
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="http://#"><img src="img/logo.jpg" alt="" height="90px"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="products.html">Products &amp; services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="kes.html">KeS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="mes.html">MeS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            
-            <div class="container">
-                <h3 class="text-center">Contact Us</h3><br>
-                
-                <div class="row">
-
-                    <div class="col-md-6 ">
-                    <p><i class="fa fa-phone"> Tel: (+255) 272644401 </i><br>
-                    <i class="fas fa-envelope"> info@katani.co.tz </i><br>
-                    <i class="fas fa-map-marker"> Katani House 1 tasma road, Bombo Area P.O BOX 123, Tanga, Tanzania (EA)</i><br>
-                    </div>
-                    <div class="col-md-6">
-                        <form action="mail.php" method="POST">
-                            <input class="form-control" type="text" name="name" placeholder="name"><br>
-                            <input class="form-control" type="email" name="email" placeholder="example: john@gmail.com"><br>
-                            <textarea class="form-control" name="text" placeholder="your message..." style="height: 150px"></textarea><br>
-                            <input class="btn btn-primary text-md-right" type="submit" value="send"><br /><br />
-                        </form>
-                    </div>
-                </div>
+<body class="katani-background">
+    <nav class="navbar  navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://#">
+                <img class="mb-2" src="img/logo.jpg" alt="" height="60px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="products.html">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href=news.html>NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="kes.html">KeS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="mes.html">MeS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-center" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
             </div>
-           
-    <footer class="page-footer font-small mdb-color pt-4 bg-color-success">
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h3 class="text-center">Contact Us</h3>
+        <br />
+        
+        <div class="row">
+
+            <div class="col-md-5 ">
+            <p><i class="fa fa-phone"> Tel: (+255) 272644401 </i><br>
+            <i class="fas fa-envelope"> info@katani.co.tz </i><br>
+            <i class="fas fa-map-marker"> Katani House 1 tasma road, Bombo Area P.O BOX 123, Tanga, Tanzania (EA)</i><br>
+            </div>
+            <div class="col-md-6">
+                <form action="mail.php" method="POST">
+                    <input class="form-control" type="text" name="name" placeholder="name"><br>
+                    <input class="form-control" type="tel" name="phone" placeholder="Phone"><br>
+                    <input class="form-control" type="email" name="email" placeholder="email"><br>
+                    <textarea class="form-control" name="text" placeholder="your message..." style="height: 150px"></textarea><br>
+                    <input class="btn btn-primary text-md-right" type="submit" value="send"><br /><br />
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small mdb-color pt-4">
             <div class="container text-center text-md-center">
                 <div class="row text-center text-md-left mt-3 pb-3">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -88,20 +101,20 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Quick Links</h6>
                         <p>
-                            <a href="http://#">MIMA</a>
+                            <a class="link" href="mima.html">MIMA</a>
                         </p>
                         <P>
-                            <a href="http://#">Sisal Produce</a>
+                            <a class="link" href="sisal_produce.html">Sisal Produce</a>
                         </P>
                         <p>
-                            <a href="http://#">Sisal Farming</a>
+                            <a class="link" href="sisal_farming.html">Sisal Farming</a>
                         </p>
                     </div>
     
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold"> Contact</h6>
                         <p>
-                            <i class="fa fa-home "> Katani House 1 tasma road, Bombo Area P.O BOX 123, Tanga, Tanzania (EA)</i>
+                            <i class="fa fa-home mr-3"> Katani House 1 tasma road, Bombo Area P.O BOX 123, Tanga, Tanzania (EA)</i>
                         </p>
                         <p>
                             <i class="fa fa-envelope mr-3"> info@katani.co.tz</i>
@@ -122,19 +135,20 @@
     
                     <div class="col-md-5 col-lg-4 ml-lg-0">
                         <div class="text-center text-md-right">
-                            <i class="fab fa-facebook "></i>
+                            <i class="fab fa-facebook size:3px"></i>
                             <i class="fab fa-linkedin"></i>
                         </div>
                     </div>
                 </div>
             </div>
     </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-        
-</body>
 
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+</body>
 
 
 </html>
