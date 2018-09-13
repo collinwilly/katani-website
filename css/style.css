@@ -1,26 +1,27 @@
 body {
-    width: 100%;
-    overflow-x: hidden;
     font-family: "roboto", sans-serif;
     line-height: 1.8;
-    -webkit-transition: all 1.5s ease-in-out;
-    -moz-transition: all 1.5s ease-in-out;
-    -o-transition: all 1.5s ease-in-out;
-    transition: all 1.5s ease-in-out;
+    overflow-x: hidden;
+    width: 100%;
+    
 }
 .navbar {
-    padding: .8rem;
-    margin-bottom: 0;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 2 !important;
-    letter-spacing: 2px;
     background-color: transparent;
+    border: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 2 ;
+    margin-bottom: 0;
+    padding: .8rem;
+    z-index: 9999;
 }
 .navbar-nav li {
-    padding-right: 20px;
     color: #000000;
+    padding-right: 20px;
+}
+.navbar img{
+    height: 80px;
+    width: 80px;
 }
 .bg-light {
     background-color: white !important;
@@ -35,8 +36,8 @@ body {
     margin-top: 3px;
 }
 .nav-link {
-    font-size: 1.1em !important;
     font-family: "Roboto" sans-serif;
+    font-size: 1.1em !important;
 }
 /* Carousel base class *
  
@@ -49,15 +50,15 @@ body {
 /* Declare heights because of positioning of img element */
 
 .carousel-item {
-    height: 32rem;
     background-color: #777;
+    height: 32rem;
 }
 .carousel-item>img {
-    position: absolute;
-    top: 0;
+    height: 32rem;
     left: 0;
     min-width: 100%;
-    height: 32rem;
+    position: absolute;
+    top: 0;
 }
 .small {
     height: 80px;
@@ -86,12 +87,16 @@ body {
     color: #bdbdbd;
 }
 .link {
-    text-decoration: none;
     color: #bdbdbd;
+    text-decoration: none;
 }
 .link:hover {
     text-decoration: none;
     color: #00421b;
+}
+.company-briefly img{
+    height: 280px;
+    width: 350px;
 }
 .text {
     color: #bdbdbd;
@@ -103,33 +108,42 @@ body {
 .contact {
     color: #bdbdbd;
 }
+.contact h3{
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
 .contact_form {
     padding-bottom: 40px;
 }
 .form-control {
-    border: 1px solid #003333;
-    height: 45px;
-    width: 100%;
-    border-radius: 5px;
     -webkit-box-shadow: none;
+    border-radius: 5px;
+    border: 1px solid #003333;
     box-shadow: none;
-    outline: none;
-    padding: 0px 20px;
-    font-size: 14px;
     color: #000000;
     font-family: "roboto", sans-serif;
+    font-size: 14px;
+    height: 45px;
+    outline: none;
+    padding: 0px 20px;
+    width: 100%;
 }
 .text-justify {
-    font-size: 15.5px;
+    color: #000000;
     font-family: "Roboto", sans-serif;
+    font-size: 15.5px;
     letter-spacing: 0.2px;
     line-height: 25px;
-    color: #000000;
 }
 .sisal_farming h3 {
     margin: 85px 0 50px;
     text-align: center;
 }
+
 i {
     font-family: "roboto" sans-serif;
 }
@@ -141,14 +155,14 @@ i {
     color: #333;
     font-size: 20px;
     font-weight: 600;
-    text-transform: capitalize;
     margin-bottom: 20px;
+    text-transform: capitalize;
     text-transform: uppercase;
 }
 .footer .single-footer h6 i {
+    border-right: 2px solid;
     margin-right: 10px;
     padding-right: 5px;
-    border-right: 2px solid;
 }
 .footer .single-footer p {
     color: #333;
@@ -159,13 +173,13 @@ i {
 .footer .single-footer .mail input {
     background: transparent;
     border: 1px solid #868585;
+    color: #868585;
+    display: inline-block;
     height: 45px;
     line-height: 45px;
-    width: 245px;
     margin-right: 15px;
-    color: #868585;
     padding-left: 18px;
-    display: inline-block;
+    width: 245px;
 }
 .katani-background {
     background-color: #fbfbfb
@@ -173,53 +187,67 @@ i {
 /* Underline From Center */
 
 .hvr-underline-from-center {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    display: inline-block;
     overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+    vertical-align: middle;
 }
 .hvr-underline-from-center:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    background: #003333;
-    height: 2px;
-    -webkit-transition-property: left, right;
-    transition-property: left, right;
     -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition-property: left, right;
     -webkit-transition-timing-function: ease-out;
+    background: #003333;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    transition-duration: 0.3s;
+    transition-property: left, right;
     transition-timing-function: ease-out;
+    z-index: -1;
 }
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
     left: 0;
     right: 0;
 }
 .gb-post {
-    position: relative;
-    min-height: 400px;
-    margin-bottom: 30px;
-    overflow: hidden;
     background-color: #fff;
+    margin-bottom: 30px;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
 }
 .values-section {
     background-color: #f6f6f6;
 }
 .values-section h2 {
+    color: #484848;
+    font-weight: bold;
     margin: 60px 0 20px;
     text-align: center;
-    font-weight: bold;
     text-transform: uppercase;
+}
+.sisal_farming h2{
     color: #484848;
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.mima h2{
+    color: #484848; 
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
 .company-briefly {
     background-color: #ffffff;
@@ -228,35 +256,76 @@ i {
     line-height: 28px;
 }
 .company-briefly h2 {
+    color: #484848;
+    font-weight: bold;
     margin: 60px 0 20px;
     text-align: center;
-    font-weight: bold;
     text-transform: uppercase;
-    color: #484848;
 }
 .services-section {
-    padding: 35px;
     background-color: #f6f6f6;
+    padding: 35px;
 }
 .services-section h2 {
+    color: #484848;
+    font-weight: bold;
     margin: 60px 0 20px;
     text-align: center;
-    font-weight: bold;
     text-transform: uppercase;
-    color: #484848;
 }
 .contact h3 {
+    color: #484848;
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about-section a {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.about{
+    text-align: center;
+}
+
+.about h2{
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.kes h3{
+    font-weight: bold;
+    margin: 60px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.products h2{
+    margin: 60px 0 20px;
+    
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+.mes h1{
     margin: 60px 0 20px;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    color: #484848;
+    
 }
-.about-section a {
-    text-decoration: underline;
-    font-weight: bold;
-    color: green;
+
+.navbar ul li a.active-page{
+    color: #003333; 
+    border-bottom:2px solid #003333;
 }
+
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;

@@ -7,18 +7,37 @@
 	<meta content="Katani Ltd activities are marketing, processing of sisal, provision of technical and extension services, consultancy, and research and development of products and markets of sisal and related products" name="description">
 	<meta content="KATANI LTD, manufacturer of ropes, twines and carpets, sisal, mkonge, mkonge na maendeleo" name="keywords">
 	<meta content="KATANI LTD" name="author">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/fontawesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link href="img/katani.jpg" rel="icon">
+	<link rel="shortcut icon" href="img/favicon.ico"/>
 	<title>Contact</title>
 </head>
 <body class="katani-background">
-	<nav class="navbar navbar-expand-md navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="http://#"><img alt="" class="mb-2" height="80px" src="img/logo.jpg"></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-			<div class="collapse navbar-responsive-collapse navbar-collapse" id="navbarSupportedContent">
+		<nav class="navbar navbar-expand-md navbar-light bg-light">
+				<img alt="" class="mb-2" height="80px" src="img/logo.jpg">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto text-dark">
 					<li class="nav-item">
 						<a class="nav-link hvr-underline-from-center" href="index.html">HOME</a>
@@ -30,7 +49,7 @@
 						<a class="nav-link hvr-underline-from-center" href="products.html">PRODUCTS</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link hvr-underline-from-center" href="news.html">NEWS</a>
+						<a class="nav-link hvr-underline-from-center" href="news">NEWS</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link hvr-underline-from-center" href="kes.html">KeS</a>
@@ -39,12 +58,13 @@
 						<a class="nav-link hvr-underline-from-center" href="mes.html">MeS</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link hvr-underline-from-center" href="contact.html">CONTACT</a>
+						<a class="nav-link hvr-underline-from-center active-page" href="contact.html">CONTACT</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
 	<div class="container-fluid contact">
 		<h3 class="text-center">Contact Us</h3><br>
 		<div class="row">
@@ -54,13 +74,17 @@
 				Katani House 1 tasma road, Bombo Area<br>
 				P.O BOX 123, Tanga, Tanzania (EA)<br>
 			</div>
-			<div class="col-md-7 pull-right contact_form">
-				<form action="mail.php" method="post">
-					<input class="form-control" name="name" placeholder="Name" type="text" value=""><br>
-					<input class="form-control" name="email" placeholder="Your Email" type="email" value=""><br>
-					<input class="form-control" name="subject" placeholder="Enter Your Subject" type="text"><br>
-					<textarea class="form-control" name="message" placeholder="Your Message..." style="height: 150px"></textarea><br>
-					<input class="btn btn-outline-primary" name="submit" type="submit" value="Send"><br>
+			<div  class="col-md-7 pull-right contact_form">
+				<form id="contact-form" action="mail.php" method="post">
+					<input class="form-control" name="name" placeholder="Name" type="text" required="required" data-error="First name is required."><br>
+					
+					<input class="form-control" name="email" placeholder="Your Email" type="email" required="required" data-error="Valid email is required."><br>
+					
+					<textarea class="form-control" name="message" placeholder="Your Message..." style="height: 150px" required="required" data-error="Please, leave a message."></textarea><br>
+					
+					<input class="btn btn-outline-primary btn-right" name="submit" type="submit" value="Send" onclick="validateForm()">
+					<br>
+				
 					<br>
 				</form>
 			</div>
@@ -68,7 +92,7 @@
 	</div>
 	<footer class="page-footer font-small mdb-color pt-4">
 		<div class="container text-center text-md-center">
-			<div class="row text-center text-md-left mt-3 pb-3">
+			<div class="row text-left text-md-left mt-3 pb-3">
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 					<h6 class="text-uppercase mb-4 font-weight-bold">Katani Limited</h6>
 					<p class="text">Katani Limited is a Tanzanian company established in 1996 as a sisal fibre primary producer, producer of sisal products, marketer and sisal contract farming manager and producer and distributor of renewable energy.</p>
@@ -83,18 +107,19 @@
 				</div>
 				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
 					<h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+					
 					<p class="contact">1 tasma road, Bombo Area<br>
 					P.O BOX 123,Tanga, Tanzania<br>
 					Email: info@katani.co.tz<br>
 					Phone: (+255) 272644401<br>
-					Fax: (+255) 272642409</p>
+					Fax: (+255) 272642409</p> 
 				</div>
 			</div>
 			<hr class="w-100">
 			<div class="row d-flex align-items-center">
 				<div class="col-md-7 col-lg-8">
-					<p class="text-center text-md-left copyright">&copy;2018 Copyright <a href="http://www.katanitz.com"><strong>Katani Limited</strong></a></p>
-					<p><a href="#">Back to top</a></p>
+					<p class="text-center text-md-left copyright">&copy;2018 Copyright Katani Limited</p>
+					
 				</div>
 			</div>
 		</div>
@@ -105,5 +130,6 @@
 	</script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
 	</script>
+	<script src="js/style.js"></script>
 </body>
 </html>
